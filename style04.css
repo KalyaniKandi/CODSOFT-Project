@@ -1,0 +1,113 @@
+html{scroll-behavior: smooth;}
+*{padding: 0;margin: 0;box-sizing: border-box;}
+body{background: #6e7478f3;font-family: 'poppins',sans-serif; }
+
+header{
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+header img{
+    width: 10rem;
+    height: auto;
+    border-radius: 43%;
+    animation: pulse 1s infinite;
+    
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0px rgba(0,0,0.5);
+    }
+    100%{
+        box-shadow: 0 0 0 30px rgba(0,0,0,0);
+    }
+}
+
+ header h3{
+    color: white;
+    margin: 1.5rem 0;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+ }
+
+ header p{
+ color: white;
+ /* font-size: 1.5rem; */
+ }
+ .arrow{
+    color: white;
+    margin-top: 1rem;
+    font-size: 5rem;
+    animation: arrow 2s ease-in-out infinite;
+ }
+
+ @keyframes arrow{
+         0%{color: #128df181;}
+         50%{color: #0a3d62;}
+         100%{color:#3c6382;}
+ }
+
+ .container{
+    width: 100%;
+    min-height: 150vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 0.8fr 0.2fr;
+    gap: 1rem;
+    grid-template-areas:"About About About skills"
+                         " edu edu edu lang"
+                          "contact exp exp exp"
+                         "footer footer footer footer";
+                          padding: 2rem;
+   
+ }
+
+ .About{
+    background: white;
+    color: black;
+    padding: 2rem;
+    grid-area: About;
+ }
+ .skills{
+    background: #3c6382;
+    color: white;
+    padding: 2rem;
+    grid-area: skills;
+ }
+
+ .edu{
+    background: #3c6382;
+    color: white;
+    padding: 2rem;
+    grid-area: edu;
+ }
+
+ .lang{
+    background:white ;
+    color:#0a3d62 ;
+    padding: 2rem;
+    grid-area: lang;
+ }
+ .contact{
+    background: white;
+    color: #0a3d62;
+    padding: 2rem;
+    grid-area: contact;
+ }
+ .exp{
+    background: #3c6382;
+    color: white;
+    padding: 2rem;
+    grid-area: exp;
+ }
+ footer{
+    color: white;
+    background: #3c6382;
+    padding: 2rem;
+    grid-area: footer;
+ }
